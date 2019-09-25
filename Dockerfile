@@ -9,8 +9,6 @@ ENV RAILS_APP_ROOT /app
 # Set our working directory inside the image
 WORKDIR /etc/nginx
 
-# create log directory
-RUN mkdir log
 
 # Copy Nginx config template
 COPY nginx.conf /tmp/docker.nginx
