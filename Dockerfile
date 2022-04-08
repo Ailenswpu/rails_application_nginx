@@ -23,5 +23,7 @@ RUN mkdir -p $RAILS_APP_ROOT/log
 RUN chown -R www-data:www-data $RAILS_APP_ROOT/log;
 RUN chmod -R 755 $RAILS_APP_ROOT/log;
 
+VOLUME [ "/app" ]
+
 # Use the "exec" form of CMD so Nginx shuts down gracefully on SIGTERM (i.e. `docker stop`)
 CMD [ "nginx", "-g", "daemon off;" ]
